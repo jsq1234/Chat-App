@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 :root {
-	--dark-color-a: #667aff;
-	--dark-color-b: #7386ff;
-	--light-color: #e6e9ff;
+	--dark-color-a: #430378;
+	--dark-color-b: #9347e6;
+	--light-color: #c4a4f0;
 	--success-color: #5cb85c;
 	--error-color: #d9534f;
 }
@@ -17,9 +17,24 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-	background: var(--light-color);
+	background: linear-gradient(90deg, #c555f5, #5a01a2, #5a01a2, #c555f5);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
 	margin: 20px;
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 ul {
 	list-style: none;
@@ -128,8 +143,12 @@ a {
 
 /* Join Page */
 .join-container {
-	max-width: 500px;
-	margin: 80px auto;
+	max-width: 800px;
+	min-width: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	color: #fff;
 }
 
